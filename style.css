@@ -29,9 +29,6 @@ main {
     gap: 5px;
     overflow-x: hidden;
 }
-.grid-item { 
-    background: rgba(0, 0, 0, 0.1); /* for debugging TODO: remove*/
-}
 .border-3 {
     border: 3px solid black;
 }
