@@ -27,6 +27,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 70px 5fr;
     gap: 5px;
+    overflow-x: hidden;
 }
 .grid-item { 
     background: rgba(0, 0, 0, 0.1); /* for debugging TODO: remove*/
@@ -125,5 +126,25 @@ main {
     }
     .equals-circle-container {
         margin-top: 10vh;
+    }
+}
+
+/* ## Fix for horizontal overflow: scale down linearly */
+@media (max-width: 250px) {
+    .square-container {
+        --square-size: calc(90 / 250 * 100vw);
+        --gap-size: calc(35 / 250 * 100vw);
+    }
+    .abc-rectangle {
+        font-size: calc(40 / 250 * 100vw);
+        margin-right: 0;
+    }
+    .circle {
+        height: calc(70 / 250 * 100vw);
+        margin-right: 0;
+    }
+    .stick {
+        width: calc(90 / 250 * 100vw);
+        height: 14px;
     }
 }
