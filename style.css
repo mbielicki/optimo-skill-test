@@ -90,6 +90,7 @@ main {
     width: 4em;
     text-align: center;
     background-color: var(--blue);
+    transition: background-color 1s linear;
 }
 .item-3 {
     display: flex;
