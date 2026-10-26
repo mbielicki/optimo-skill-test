@@ -7,6 +7,7 @@
 }
 * {
     margin: 0;
+    box-sizing: border-box;
 }
 body {
     height: 100vh;
@@ -39,7 +40,6 @@ main {
         grid-row: 1 / span 2;
     }
 }
-
 @media (min-width: 900px) {
     main {
         grid-template-columns: 1fr 1fr 1fr;
@@ -48,4 +48,23 @@ main {
     .item-3 {
         grid-row: auto;
     }
+}
+
+/* Shapes */
+.square {
+    background-color: var(--red);
+    border: 3px solid black;
+    
+    width: var(--square-size);
+    height: var(--square-size);
+}
+.square-container {
+    --square-size: 80px;
+    --gap-size: 30px;
+    --width: calc(2 * var(--square-size) + var(--gap-size));
+    display: flex;
+    gap: var(--gap-size);
+    width: var(--width);
+    transform-origin: top right;
+    transform: translateX(calc(-1 * var(--width) * sqrt(2) / 2 * tan(pi / 8) )) rotate(-45deg);
 }
