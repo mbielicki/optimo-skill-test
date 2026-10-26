@@ -1,6 +1,23 @@
+:root {
+    --header-bg: #808000;
+    --main-bg: #008000;
+    --blue: #0000ff;
+    --red: #ff0000;
+    --circle-bg: #008080;
+}
 * {
     margin: 0;
 }
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
 header {
-    background-color: #808000;
+    background-color: var(--header-bg);
+    height: 2rem;
+}
+main {
+    background-color: var(--main-bg);
+    flex: 1;
 }
