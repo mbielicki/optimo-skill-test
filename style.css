@@ -28,16 +28,18 @@ main {
     grid-template-rows: 4fr 1fr 5fr;
     gap: 5px;
 }
-.grid-item {
-    background: white;
+.grid-item { 
+    background: rgba(0, 0, 0, 0.1); /* for debugging TODO: remove*/
 }
+.border-3 {
+    border: 3px solid black;
+}
+
 
 /* ## Shapes */
 /* ### Squares */
 .square {
-    background-color: var(--red);
-    border: 3px solid black;
-    
+    background-color: var(--red);    
     width: var(--square-size);
     height: var(--square-size);
 }
@@ -57,7 +59,6 @@ main {
     width: 80px;
     height: 12px;
     background-color: var(--blue);
-    border: 3px solid black;
 }
 .equals-container {
     display: flex;
@@ -70,7 +71,6 @@ main {
     aspect-ratio: 1.1 / 1;
     background-color: var(--circle-bg);
     border-radius: 100%;
-    border: 3px solid black;
 }
 .equals-circle-container {
     height: 100%;
@@ -88,7 +88,6 @@ main {
     margin-left: 1em;
     width: fit-content;
     background-color: var(--blue);
-    border: 3px solid black;
 }
 
 /* ## Wider Viewports */
