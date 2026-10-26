@@ -50,7 +50,8 @@ main {
     }
 }
 
-/* Shapes */
+/* ## Shapes */
+/* ### Squares */
 .square {
     background-color: var(--red);
     border: 3px solid black;
@@ -67,4 +68,32 @@ main {
     width: var(--width);
     transform-origin: top right;
     transform: translateX(calc(-1 * var(--width) * sqrt(2) / 2 * tan(pi / 8) )) rotate(-45deg);
+}
+
+/* ### Shapes = o */
+.stick {
+    width: 80px;
+    height: 12px;
+    background-color: var(--blue);
+    border: 3px solid black;
+}
+.equals-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.circle {
+    height: 70px;
+    aspect-ratio: 1.1 / 1;
+    background-color: var(--circle-bg);
+    border-radius: 100%;
+    border: 3px solid black;
+}
+.equals-circle-container {
+    height: 100%;
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
 }
