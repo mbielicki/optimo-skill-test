@@ -89,7 +89,7 @@ main {
     aspect-ratio: 1.1 / 1;
     margin-right: 100px;
     background-color: var(--circle-bg);
-    border-radius: 100%;
+    border-radius: 50%;
     animation: bounce .5s ease-out alternate-reverse 5;
 }
 .equals-circle-container {
