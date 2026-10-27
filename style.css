@@ -27,7 +27,7 @@ main {
     grid-template-columns: 1fr;
     grid-template-rows: 4fr 70px 5fr;
     gap: 5px;
-    overflow-x: hidden;
+    overflow: hidden;
 }
 .border-3 {
     border: 3px solid black;
