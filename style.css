@@ -1,3 +1,4 @@
+/* ## Variables */
 :root {
     --header-bg: #808000;
     --main-bg: #008000;
@@ -6,6 +7,13 @@
     --dark-red: #c83737;
     --circle-bg: #008080;
 }
+
+/* ## Utility classes */
+.border-3 {
+    border: 3px solid black;
+}
+
+/* ## Layout */
 * {
     margin: 0;
     box-sizing: border-box;
@@ -29,10 +37,6 @@ main {
     gap: 1em;
     overflow: hidden;
 }
-.border-3 {
-    border: 3px solid black;
-}
-
 
 /* ## Shapes */
 /* ### Squares */
@@ -55,8 +59,18 @@ main {
     margin-bottom: 2em;
     margin-right: 2em;
 }
+/* Dynamic square size */
+@supports (container-type: size) and (width: 1cqmin) {
+    .square-container {
+        container-type: size;
+    }
+    .square-aligner {
+        --square-size: calc(100cqmin * 2 / (sqrt(2) * (3 + 35 / 90)));
+        --gap-size: calc(var(--square-size) * 35 / 90);
+    }
+}
 
-/* ### Shapes = o */
+/* ### Equals and circle */
 .stick {
     width: 90px;
     height: 14px;
@@ -67,7 +81,6 @@ main {
     flex-direction: column;
     gap: 20px;
 }
-
 .circle {
     height: 70px;
     aspect-ratio: 1.1 / 1;
@@ -153,12 +166,3 @@ main {
     }
 }
 
-@supports (container-type: size) and (width: 1cqmin) {
-    .square-container {
-        container-type: size;
-    }
-    .square-aligner {
-        --square-size: calc(100cqmin * 2 / (sqrt(2) * (3 + 35 / 90)));
-        --gap-size: calc(var(--square-size) * 35 / 90);
-    }
-}
