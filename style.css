@@ -147,21 +147,20 @@ main {
 }
 
 /* ## Fix for horizontal overflow: scale down linearly */
-@media (max-width: 250px) {
+@media (max-width: 350px) {
     .square-aligner {
-        --square-size: calc(90 / 250 * 100vw);
-        --gap-size: calc(35 / 250 * 100vw);
+        --square-size: calc(90 / 350 * 100vw);
+        --gap-size: calc(35 / 350 * 100vw);
     }
     .abc-rectangle {
-        font-size: calc(40 / 250 * 100vw);
-        margin-right: 0;
+        font-size: calc(40 / 350 * 100vw);
     }
     .circle {
-        height: calc(70 / 250 * 100vw);
-        margin-right: 0;
+        height: calc(70 / 350 * 100vw);
+        margin-right: calc(100 / 350 * 100vw);
     }
     .stick {
-        width: calc(90 / 250 * 100vw);
+        width: calc(90 / 350 * 100vw);
         height: 14px;
     }
 }
