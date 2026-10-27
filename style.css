@@ -148,10 +148,6 @@ main {
 
 /* ## Fix for horizontal overflow: scale down linearly */
 @media (max-width: 350px) {
-    .square-aligner {
-        --square-size: calc(90 / 350 * 100vw);
-        --gap-size: calc(35 / 350 * 100vw);
-    }
     .abc-rectangle {
         font-size: calc(40 / 350 * 100vw);
     }
