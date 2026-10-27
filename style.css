@@ -102,7 +102,7 @@ main {
 
 /* ### ABC rectangle */
 .abc-rectangle {
-    font-family: 'Gill Sans', Calibri, sans-serif;
+    font-family: Calibri, sans-serif;
     font-size: 40px;
     padding-top: .5em;
     margin-right: 2em;
