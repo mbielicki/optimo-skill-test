@@ -41,7 +41,7 @@ main {
     width: var(--square-size);
     height: var(--square-size);
 }
-.square-container {
+.square-aligner {
     --square-size: 90px;
     --gap-size: 35px;
     --width: calc(2 * var(--square-size) + var(--gap-size));
@@ -50,6 +50,10 @@ main {
     width: var(--width);
     transform-origin: top right;
     transform: translateX(calc(-1 * var(--width) * sqrt(2) / 2 * tan(pi / 8) )) rotate(-45deg);
+}
+.square-container {
+    margin-bottom: 2em;
+    margin-right: 2em;
 }
 
 /* ### Shapes = o */
@@ -129,7 +133,7 @@ main {
 
 /* ## Fix for horizontal overflow: scale down linearly */
 @media (max-width: 250px) {
-    .square-container {
+    .square-aligner {
         --square-size: calc(90 / 250 * 100vw);
         --gap-size: calc(35 / 250 * 100vw);
     }
@@ -144,5 +148,15 @@ main {
     .stick {
         width: calc(90 / 250 * 100vw);
         height: 14px;
+    }
+}
+
+@supports (container-type: size) and (width: 1cqmin) {
+    .square-container {
+        container-type: size;
+    }
+    .square-aligner {
+        --square-size: calc(100cqmin * 2 / (sqrt(2) * (3 + 35 / 90)));
+        --gap-size: calc(var(--square-size) * 35 / 90);
     }
 }
