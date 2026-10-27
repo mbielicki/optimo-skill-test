@@ -81,7 +81,8 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px;
-    animation: fade-in 1s reverse;
+    opacity: 0;
+    animation: fade-in 2s ease-out 2s forwards;
 }
 .circle {
     height: 70px;
@@ -184,6 +185,6 @@ main {
 }
 @keyframes fade-in {
     100% {
-        opacity: 0;
+        opacity: 1;
     }
 }
