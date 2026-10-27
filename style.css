@@ -54,7 +54,8 @@ main {
     gap: var(--gap-size);
     width: var(--width);
     transform-origin: top right;
-    transform: translateX(calc(-1 * var(--width) * sqrt(2) / 2 * tan(pi / 8) )) rotate(-45deg);
+    /* offset = -1 * var(--width) * sqrt(2) / 2 * tan(pi / 8) */
+    transform: translateX(calc(var(--width) * -0.292893)) rotate(-45deg);
 }
 .square-container {
     margin-bottom: 2em;
@@ -66,7 +67,8 @@ main {
         container-type: size;
     }
     .square-aligner {
-        --square-size: calc(100cqmin * 2 / (sqrt(2) * (3 + 35 / 90)));
+        /* calc(100cqmin * 2 / (sqrt(2) * (3 + 35 / 90))) */
+        --square-size: calc(100cqmin * 0.4173);
         --gap-size: calc(var(--square-size) * 35 / 90);
     }
 }
