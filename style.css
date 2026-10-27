@@ -44,6 +44,7 @@ main {
     background-color: var(--red);    
     width: var(--square-size);
     height: var(--square-size);
+    animation: appear-from-corner 3s ease-in reverse;
 }
 .square-aligner {
     --square-size: 90px;
@@ -161,3 +162,9 @@ main {
     }
 }
 
+/* Animations */
+@keyframes appear-from-corner {
+    100% {
+        transform: translate(0, -30vw) rotate(45deg);
+    }
+}
