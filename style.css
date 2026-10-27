@@ -108,7 +108,7 @@ main {
     background-color: var(--blue);
     transition: background-color 1s linear;
 }
-.item-3 {
+.abc-rectangle-container {
     display: flex;
     justify-content: center;
 }
@@ -119,7 +119,7 @@ main {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 2fr 1fr;
     }
-    .item-3 {
+    .abc-rectangle-container {
         grid-row: 1 / span 2;
     }
     .abc-rectangle {
@@ -132,7 +132,7 @@ main {
         grid-template-columns: 1fr 1fr 1fr;
         grid-template-rows: 1fr;
     }
-    .item-3 {
+    .abc-rectangle-container {
         grid-row: auto;
     }
     .abc-rectangle {
