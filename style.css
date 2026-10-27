@@ -179,8 +179,7 @@ main {
 }
 @keyframes bounce {
     100% {
-        transform: translateY(-10vh);
-        aspect-ratio: 1;
+        transform: translateY(-10vh) scaleY(1.1);
     }
 }
 @keyframes fade-in {
